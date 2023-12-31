@@ -1,23 +1,10 @@
-
-
-
-
-
-
 let titleProject = prompt('Название проекта?')
-console.log(titleProject)
+console.log(titleProject);
 let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями')
-console.log(screensValue)
+console.log(screensValue);
 
-
-
-let responsive = prompt('Нужен ли респонсивный сайт?');
-if (responsive = 'да') {
-    console.log('респонсивный');
-} else {
-    console.log('не респонсивный');
-}
-
+let responsive = confirm('Нужен ли респонсивный сайт?')
+console.log(responsive)
 
 let screenPrice = 1000
 let service1 = prompt('Какой сервис нужен?')
@@ -42,7 +29,7 @@ if (fullPrice > 50000) {
     console.log('сделаем скидку в 5%')
 } else if (0 < fullPrice && fullPrice < 20000) {
     console.log('скидок нет')
-} else if (fullPrice = 0, 20000, 50000) {
+} else if (fullPrice === 0, 20000, 50000) {
     console.log('скидка')
 } else if (fullPrice < 0) {
     alert('что-то пошло не так')

@@ -2,12 +2,6 @@ let titleProject = prompt('Название проекта?')
 console.log(titleProject);
 let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями')
 console.log(screensValue);
-function getTitle() {
-    return titleProject.charAt(0).toUpperCase() +
-        titleProject.slice(1)
-}
-getTitle();
-console.log(getTitle(dada));
 
 let responsive = confirm('Нужен ли респонсивный сайт?')
 console.log(responsive)
@@ -40,9 +34,3 @@ if (fullPrice > 50000) {
 } else if (fullPrice < 0) {
     alert('что-то пошло не так')
 }
-
-const allServicePrices = function getAllServicePrices() {
-    return 3 + 2;
-};
-allServicePrices();
-console.log(allServicePrices)

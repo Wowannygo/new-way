@@ -1,6 +1,12 @@
 let titleProject = prompt('Название проекта?');
 let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями')
-console.log(screensValue);
+function showTypeOf(screensValue) {
+  console.log(typeof screensValue);
+}
+
+showTypeOf(screensValue);
+
+
 function getTitle() {
   return titleProject.charAt(0).toUpperCase() +
     titleProject.slice(1).toLowerCase();
@@ -16,17 +22,23 @@ let service1 = prompt('Какой сервис нужен?')
 let servicePrice1 = prompt('Сколько это будет стоить?')
 let service2 = prompt('Какой еще сервис тебе нужен?')
 let servicePrice2 = prompt('Сколько будет стоить этот второй сервис?')
-let fullPrice = screenPrice + +servicePrice1 + +servicePrice2
-console.log(fullPrice)
-const getAllServicePrices = function (servicePrice1, servicePrice2) {
+
+
+
+const getAllServicePrices = function () {
   return servicePrice1 + servicePrice2;
 };
 const allServicePrices = getAllServicePrices()
 console.log('Все сервисы', allServicePrices);
 
-let Percent = fullPrice * 10 / 100
+function getFullPrice() {
+  return allServicePrices + screenPrice;
+}
+let fullPrice = getFullPrice();
+
+let discountPercent = 10
 function getServicePercentPrices() {
-  return fullPrice - Percent
+  return fullPrice - (fullPrice * discountPercent / 100)
 }
 let servicePercentPrice = getServicePercentPrices()
 console.log('Итог', Math.round(servicePercentPrice))

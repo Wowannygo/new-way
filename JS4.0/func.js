@@ -19,9 +19,9 @@ let responsive = confirm('Нужен ли респонсивный сайт?')
 
 let screenPrice = 1000
 let service1 = prompt('Какой сервис нужен?')
-let servicePrice1 = prompt('Сколько это будет стоить?')
+let servicePrice1 = +prompt('Сколько это будет стоить?')
 let service2 = prompt('Какой еще сервис тебе нужен?')
-let servicePrice2 = prompt('Сколько будет стоить этот второй сервис?')
+let servicePrice2 = +prompt('Сколько будет стоить этот второй сервис?')
 
 
 

@@ -29,11 +29,11 @@ const getAllServicePrices = function () {
     let servicePrice1;
     let servicePrice2;
     do {
-        servicePrice1 = Number(prompt("Сколько сколько это будет стоить?"));
+        servicePrice1 = +(prompt("Сколько сколько это будет стоить?"));
     } while (isNaN(servicePrice1));
 
     do {
-        servicePrice2 = Number(prompt("Сколько будет стоить вторая дополнительная услуга?"));
+        servicePrice2 = +(prompt("Сколько будет стоить вторая дополнительная услуга?"));
     } while (isNaN(servicePrice2));
     return servicePrice1 + servicePrice2;
 }

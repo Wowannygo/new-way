@@ -2,9 +2,8 @@ let titleProject = prompt('Название проекта?');
 let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями')
 let responsive = confirm('Нужен ли респонсивный сайт?')
 let service1 = prompt('Какой сервис нужен?')
-let servicePrice1 = +prompt('Сколько это будет стоить?')
 let service2 = prompt('Какой еще сервис тебе нужен?')
-let servicePrice2 = +prompt('Сколько будет стоить этот второй сервис?')
+
 
 
 let screenPrice = 1000;
@@ -27,6 +26,15 @@ const getAllServicePrices = function () {
     for (let i = 0; i < additionalServices.length; i++) {
         prompt(additionalServices[i]);
     }
+    let servicePrice1;
+    let servicePrice2;
+    do {
+        servicePrice1 = Number(prompt("Сколько сколько это будет стоить?"));
+    } while (isNaN(servicePrice1));
+
+    do {
+        servicePrice2 = Number(prompt("Сколько будет стоить вторая дополнительная услуга?"));
+    } while (isNaN(servicePrice2));
     return servicePrice1 + servicePrice2;
 }
 
@@ -65,6 +73,5 @@ console.log('Все сервисы', allServicePrices);
 console.log('Итог', Math.round(servicePercentPrice))
 
 showTypeOf(screensValue);
-getAllServicePrices();
 getFullPrice();
 getRollbackMessage();

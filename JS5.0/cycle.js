@@ -1,13 +1,10 @@
 let titleProject = prompt('Название проекта?');
 let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями')
 let responsive = confirm('Нужен ли респонсивный сайт?')
-let service1 = prompt('Какой сервис нужен?')
-let service2 = prompt('Какой еще сервис тебе нужен?')
-
-
+let servicePrice1
+let servicePrice2;
 
 let screenPrice = 1000;
-
 
 screenPrice = Number(screenPrice);
 
@@ -22,24 +19,23 @@ function getTitle() {
 }
 
 const getAllServicePrices = function () {
-    let additionalServices = ['Какая доп услуга нужна?', 'Какая ещё доп услуга нужна?'];
+    let additionalServices = ['Какая доп услуга нужна?', 'Какая ещё доп услуга нужна?',];
+    let priceService;
+    let sum = 0;
     for (let i = 0; i < additionalServices.length; i++) {
         prompt(additionalServices[i]);
+        do {
+            priceService = +prompt("Сколько это стоит?");
+
+        } while (isNaN(priceService))
+
+        sum += priceService;
     }
-    let servicePrice1;
-    let servicePrice2;
-    do {
-        servicePrice1 = +(prompt("Сколько сколько это будет стоить?"));
-    } while (isNaN(servicePrice1));
 
-    do {
-        servicePrice2 = +(prompt("Сколько будет стоить вторая дополнительная услуга?"));
-    } while (isNaN(servicePrice2));
-    return servicePrice1 + servicePrice2;
+    return sum;
+
 }
-
 const allServicePrices = getAllServicePrices()
-console.log('Все сервисы', allServicePrices);
 
 function getFullPrice() {
     return allServicePrices + screenPrice;
